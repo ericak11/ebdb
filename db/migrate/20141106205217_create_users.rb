@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :last_name
       t.string :email
       t.string :gender
-      t.string :birthday
+      t.date :birthday
       t.string :picture
       t.string :password_digest
       t.string :location

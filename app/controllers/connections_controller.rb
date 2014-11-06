@@ -1,5 +1,6 @@
 class ConnectionsController < ApplicationController
   before_action :set_connection, only: [:show, :edit, :update, :destroy]
+  before_action :set_user
 
   # GET /connections
   # GET /connections.json
@@ -70,5 +71,10 @@ class ConnectionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def connection_params
       params.require(:connection).permit(:rating, :date, :location, :comments)
+    end
+
+    def set_user
+      binding.pry
+      @user = User.find(session[:user_id])
     end
 end

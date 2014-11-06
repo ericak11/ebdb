@@ -21,27 +21,35 @@
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.email_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
+    <%= f.label :gender, 'Male' %>
+    <%= f.radio_button :gender, 'Male', :checked => true %>
+    <%= f.label :gender, 'Female' %>
+    <%= f.radio_button :gender, 'Female' %>
   </div>
   <div class="field">
     <%= f.label :birthday %><br>
-    <%= f.text_field :birthday %>
+    <%= f.date_select(:birthday, :start_year => 2000,:end_year => 1930, :order => [:month, :day, :year]) %>
   </div>
   <div class="field">
     <%= f.label :picture %><br>
     <%= f.text_field :picture %>
   </div>
-  <div class="field">
-    <%= f.label :password_digest %><br>
-    <%= f.text_field :password_digest %>
+  <div id="field" class="field">
+  <p>
+    <%= f.label :password %>:
+    <%= f.password_field :password, placeholder: 'Password (required)' %><br/></p>
   </div>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
+  <div id="field" class="field">
+    <p><%= f.label :password_confirmation, 'Confirmation' %>:
+    <%= f.password_field :password_confirmation, placeholder: 'Confirmation (required)' %><br/></p>
   </div>
   <div class="actions">
     <%= f.submit %>

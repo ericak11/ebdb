@@ -26,19 +26,13 @@
 </p>
 
 <p>
-  <strong>Picture:</strong>
-  <%= @user.picture %>
-</p>
-
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
+  <img src="<%= @user.picture %>" alt="">
 </p>
 
 <p>
   <strong>Location:</strong>
   <%= @user.location %>
 </p>
-
+<%= link_to 'Add Relation', user_connections_path(@user) %> |
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
