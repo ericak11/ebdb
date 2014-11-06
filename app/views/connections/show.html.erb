@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @connection.rating %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @connection.date %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @connection.location %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @connection.comments %>
+</p>
+
+<%= link_to 'Edit', edit_connection_path(@connection) %> |
+<%= link_to 'Back', connections_path %>
