@@ -27,7 +27,7 @@ class ConnectionsController < ApplicationController
   def create
 
     @connection = Connection.new(connection_params)
-    binding.pry
+    @connection.user_id = @user.id
     respond_to do |format|
       if @connection.save
         format.html { redirect_to @connection, notice: 'Connection was successfully created.' }
