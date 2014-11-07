@@ -25,8 +25,9 @@ class ConnectionsController < ApplicationController
   # POST /connections
   # POST /connections.json
   def create
-    @connection = Connection.new(connection_params)
 
+    @connection = Connection.new(connection_params)
+    binding.pry
     respond_to do |format|
       if @connection.save
         format.html { redirect_to @connection, notice: 'Connection was successfully created.' }
@@ -70,7 +71,7 @@ class ConnectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def connection_params
-      params.require(:connection).permit(:rating, :date, :location, :comments)
+      params.require(:connection).permit(:rating, :date, :location, :comments, :relation_id, :user_id)
     end
 
     def set_user

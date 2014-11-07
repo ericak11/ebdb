@@ -12,12 +12,13 @@
   <% end %>
 
   <div class="field">
+    <%= f.hidden_field :relation_id, :value => params["user_id"].to_i %>
     <%= f.label :rating %><br>
-    <%= f.number_field :rating %>
+    <%= f.number_field :rating, :min => 1, :max => 5 %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.text_field :date %>
+    <%=  f.date_field :date %>
   </div>
   <div class="field">
     <%= f.label :location %><br>

@@ -5198,3 +5198,1054 @@ Processing by ConnectionsController#index as HTML
   [1m[35mConnection Load (0.2ms)[0m  SELECT "connections".* FROM "connections"
   Rendered connections/index.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 74ms (Views: 71.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-11-07 12:42:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 148ms (Views: 120.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 12:42:26 -0500
+
+
+Started GET "/users/1/connections" for 127.0.0.1 at 2014-11-07 12:42:28 -0500
+Processing by ConnectionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mConnection Load (0.4ms)[0m  SELECT "connections".* FROM "connections"
+  Rendered connections/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 83ms (Views: 75.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-07 13:54:35 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 16ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-11-07 13:54:35 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 83ms (Views: 81.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 13:54:36 -0500
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-07 13:54:56 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 81ms (Views: 79.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-11-07 13:55:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 79ms (Views: 77.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2/connections" for 127.0.0.1 at 2014-11-07 13:55:10 -0500
+Processing by ConnectionsController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mConnection Load (0.3ms)[0m  SELECT "connections".* FROM "connections"
+  Rendered connections/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 79ms (Views: 75.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/connections/new" for 127.0.0.1 at 2014-11-07 13:55:12 -0500
+Processing by ConnectionsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered connections/_form.html.erb (26.4ms)
+  Rendered connections/new.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 113ms (Views: 108.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-11-07 13:59:32 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 164ms (Views: 137.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 13:59:33 -0500
+
+
+Started GET "/users/2/connections/new" for 127.0.0.1 at 2014-11-07 13:59:35 -0500
+Processing by ConnectionsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered connections/_form.html.erb (25.7ms)
+  Rendered connections/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 111ms (Views: 100.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/2/connections/new" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+Processing by ConnectionsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered connections/_form.html.erb (10.5ms)
+  Rendered connections/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 90ms (Views: 86.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:08:29 -0500
+
+
+Started GET "/users/2/connections/new" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+Processing by ConnectionsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered connections/_form.html.erb (8.5ms)
+  Rendered connections/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 85ms (Views: 82.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:11:09 -0500
+
+
+Started POST "/users/1/connections" for 127.0.0.1 at 2014-11-07 14:11:25 -0500
+Processing by ConnectionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LOsAmZh38kaw8pO8iuN2N9ZGKwT3m17ZRoClN+ua5hY=", "connection"=>{"rating"=>"5", "date(2i)"=>"11", "date(3i)"=>"1", "date(1i)"=>"2014", "location"=>"New York", "comments"=>"Really Fun"}, "commit"=>"Create Connection", "user_id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 106186ms
+
+ActiveRecord::MultiparameterAssignmentErrors (1 error(s) on assignment of multiparameter attributes [error on assignment [11, 1, 2014] to date (wrong number of arguments (3 for 0..1))]):
+  app/controllers/connections_controller.rb:29:in `create'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.9ms)
+
+
+Started GET "/users/2/connections/new" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+Processing by ConnectionsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered connections/_form.html.erb (8.6ms)
+  Rendered connections/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 102ms (Views: 99.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 14:13:20 -0500
+
+
+Started POST "/users/1/connections" for 127.0.0.1 at 2014-11-07 14:13:31 -0500
+Processing by ConnectionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LOsAmZh38kaw8pO8iuN2N9ZGKwT3m17ZRoClN+ua5hY=", "connection"=>{"rating"=>"5", "date"=>"2014-11-03", "location"=>"New York", "comments"=>"hello"}, "commit"=>"Create Connection", "user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 48293ms
+
+SystemExit (exit):
+  app/controllers/connections_controller.rb:28:in `create'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started GET "/users/2/connections/new" for 127.0.0.1 at 2014-11-07 14:14:36 -0500
+Processing by ConnectionsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered connections/_form.html.erb (164684.1ms)
+  Rendered connections/new.html.erb within layouts/application (164685.1ms)
+Completed 200 OK in 164766ms (Views: 164764.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:17:21 -0500
+
+
+Started POST "/users/1/connections" for 127.0.0.1 at 2014-11-07 14:17:51 -0500
+Processing by ConnectionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LOsAmZh38kaw8pO8iuN2N9ZGKwT3m17ZRoClN+ua5hY=", "connection"=>{"rating"=>"3", "date"=>"2014-11-02", "location"=>"New York", "comments"=>"It was ok"}, "commit"=>"Create Connection", "user_id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 20904ms
+
+SystemExit (exit):
+  app/controllers/connections_controller.rb:28:in `create'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.5ms)
+
+
+Started GET "/users/2/connections/new" for 127.0.0.1 at 2014-11-07 14:18:17 -0500
+Processing by ConnectionsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered connections/_form.html.erb (2.3ms)
+  Rendered connections/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `merge' for 2:Fixnum):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.hidden_field :relation_id, params["user_id"].to_i %>
+    16:     <%= f.label :rating %><br>
+    17:     <%= f.number_field :rating, :min => 1, :max => 5 %>
+    18:   </div>
+  app/views/connections/_form.html.erb:15:in `block in _app_views_connections__form_html_erb___1033214130789148384_70252650153060'
+  app/views/connections/_form.html.erb:1:in `_app_views_connections__form_html_erb___1033214130789148384_70252650153060'
+  app/views/connections/new.html.erb:3:in `_app_views_connections_new_html_erb___3009721671383650017_70252604781580'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.1ms)
+
+
+Started GET "/users/2/connections/new" for 127.0.0.1 at 2014-11-07 14:18:43 -0500
+Processing by ConnectionsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered connections/_form.html.erb (3.7ms)
+  Rendered connections/new.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `merge' for "2":String):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.hidden_field :relation_id, params["user_id"] %>
+    16:     <%= f.label :rating %><br>
+    17:     <%= f.number_field :rating, :min => 1, :max => 5 %>
+    18:   </div>
+  app/views/connections/_form.html.erb:15:in `block in _app_views_connections__form_html_erb___1033214130789148384_70252625715560'
+  app/views/connections/_form.html.erb:1:in `_app_views_connections__form_html_erb___1033214130789148384_70252625715560'
+  app/views/connections/new.html.erb:3:in `_app_views_connections_new_html_erb___3009721671383650017_70252604781580'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.7ms)
+
+
+Started GET "/users/2/connections/new" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+Processing by ConnectionsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered connections/_form.html.erb (6.2ms)
+  Rendered connections/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 81ms (Views: 78.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:20:02 -0500
+
+
+Started POST "/users/1/connections" for 127.0.0.1 at 2014-11-07 14:20:12 -0500
+Processing by ConnectionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LOsAmZh38kaw8pO8iuN2N9ZGKwT3m17ZRoClN+ua5hY=", "connection"=>{"relation_id"=>"2", "rating"=>"3", "date"=>"2014-11-02", "location"=>"New York", "comments"=>"It was ok"}, "commit"=>"Create Connection", "user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 67360ms
+
+SystemExit (exit):
+  app/controllers/connections_controller.rb:28:in `create'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.1ms)
+
+
+Started POST "/users/1/connections" for 127.0.0.1 at 2014-11-07 14:22:57 -0500
+Processing by ConnectionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LOsAmZh38kaw8pO8iuN2N9ZGKwT3m17ZRoClN+ua5hY=", "connection"=>{"relation_id"=>"2", "rating"=>"3", "date"=>"2014-11-02", "location"=>"New York", "comments"=>"It was ok"}, "commit"=>"Create Connection", "user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 86761ms
+
+SystemExit (exit):
+  app/controllers/connections_controller.rb:30:in `create'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started POST "/users/1/connections" for 127.0.0.1 at 2014-11-07 14:24:27 -0500
+Processing by ConnectionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LOsAmZh38kaw8pO8iuN2N9ZGKwT3m17ZRoClN+ua5hY=", "connection"=>{"relation_id"=>"2", "rating"=>"3", "date"=>"2014-11-02", "location"=>"New York", "comments"=>"It was ok"}, "commit"=>"Create Connection", "user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 11407ms
+
+SystemExit (exit):
+  app/controllers/connections_controller.rb:30:in `create'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:22 -0500
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 71ms (Views: 69.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:30:31 -0500
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-07 14:34:08 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 96ms
+
+ActionView::Template::Error (Missing partial layouts/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Erica/dev/wdi/ebdb/app/views"
+):
+     7:   <%= csrf_meta_tags %>
+     8: </head>
+     9: <body>
+    10: <%= render 'layouts/header' %>
+    11: <%= yield %>
+    12: 
+    13: </body>
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___1022861994898241367_70252639065180'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-07 14:34:19 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 76ms
+
+ActionView::Template::Error (Missing partial layouts/__header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Erica/dev/wdi/ebdb/app/views"
+):
+     7:   <%= csrf_meta_tags %>
+     8: </head>
+     9: <body>
+    10: <%= render 'layouts/_header' %>
+    11: <%= yield %>
+    12: 
+    13: </body>
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___1022861994898241367_70252652364720'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-07 14:34:37 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 65ms
+
+ActionView::Template::Error (Missing partial layouts/__header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Erica/dev/wdi/ebdb/app/views"
+):
+     7:   <%= csrf_meta_tags %>
+     8: </head>
+     9: <body>
+    10: <%= render 'layouts/_header' %>
+    11: <%= yield %>
+    12: 
+    13: </body>
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___1022861994898241367_70252652364720'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:45 -0500
+
+
+Started DELETE "/session" for 127.0.0.1 at 2014-11-07 14:34:47 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LOsAmZh38kaw8pO8iuN2N9ZGKwT3m17ZRoClN+ua5hY="}
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `log_out!' for #<SessionsController:0x007fc9f17e4ec0>):
+  app/controllers/sessions_controller.rb:17:in `destroy'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.9ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2014-11-07 14:49:49 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LOsAmZh38kaw8pO8iuN2N9ZGKwT3m17ZRoClN+ua5hY="}
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `log_out!' for #<SessionsController:0x007fc9f11c6b60>):
+  app/controllers/sessions_controller.rb:17:in `destroy'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.6ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2014-11-07 14:49:53 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LOsAmZh38kaw8pO8iuN2N9ZGKwT3m17ZRoClN+ua5hY="}
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `log_out!' for #<SessionsController:0x007fc9f0e825d0>):
+  app/controllers/sessions_controller.rb:17:in `destroy'
+
+
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Erica/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 77ms (Views: 71.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:51 -0500
+
+
+Started DELETE "/session" for 127.0.0.1 at 2014-11-07 14:50:52 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LOsAmZh38kaw8pO8iuN2N9ZGKwT3m17ZRoClN+ua5hY="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-07 14:50:52 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 64ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:50:53 -0500
+
+
+Started POST "/session" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LOsAmZh38kaw8pO8iuN2N9ZGKwT3m17ZRoClN+ua5hY=", "email"=>"hootie105@mac.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'hootie105@mac.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 74ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 90ms (Views: 88.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+
+
+Started GET "/assets/connections.css?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+
+
+Started GET "/assets/connections.js?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:51:00 -0500
