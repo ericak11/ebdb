@@ -74,7 +74,6 @@ class ConnectionsController < ApplicationController
     end
 
     def set_user
-      binding.pry
       @user = User.find(session[:user_id])
     end
 end
