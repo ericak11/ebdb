@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true
   validates :first_name, :last_name, :gender, :birthday, :location, presence: true
   has_many :connections, :foreign_key => 'user_id'
-  has_many :connections, :foreign_key => 'relation_id'
+  has_many :relations, :class_name  => "Connection", :foreign_key => 'relation_id'
 end
 
 # SCHEMA INFO
