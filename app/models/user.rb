@@ -1,9 +1,10 @@
 class User < ActiveRecord::Base
-
   has_secure_password
   validates :password, presence: true
   validates :email, presence: true, uniqueness: true
   validates :first_name, :last_name, :gender, :birthday, :location, presence: true
+  has_many :connections, :foreign_key => 'user_id'
+  has_many :connections, :foreign_key => 'relation_id'
 end
 
 # SCHEMA INFO

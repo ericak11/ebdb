@@ -1,5 +1,9 @@
 class Connection < ActiveRecord::Base
   validates :rating, :date, :location, :user_id, :relation_id, :comments, presence: true
+
+  belongs_to :realation, :class_name => 'User'
+  belongs_to :user
+
 end
 
 
