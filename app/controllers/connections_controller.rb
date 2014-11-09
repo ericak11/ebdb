@@ -5,7 +5,7 @@ class ConnectionsController < ApplicationController
   # GET /connections
   # GET /connections.json
   def index
-    @connections = Connection.all
+    @connections = @user.connections
   end
 
   # GET /connections/1

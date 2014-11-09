@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
       <th>Rating</th>
       <th>Date</th>
       <th>Location</th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @connections.each do |connection| %>
       <tr>
+        <td><%= User.find(connection.relation_id).first_name  %></td>
         <td><%= connection.rating %></td>
         <td><%= connection.date %></td>
         <td><%= connection.location %></td>

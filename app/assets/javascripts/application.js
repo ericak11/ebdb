@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require vis
 //= require turbolinks
 //= require_tree .
+
