@@ -1,4 +1,6 @@
 <h1>Listing users</h1>
+<%= content_tag "div", id: "user", data: {user: @user.id} do %>
+<% end %>
 <div id="mynetwork"></div>
 <%= link_to 'New User', new_user_path(created_by: 'user') %>
 <table>

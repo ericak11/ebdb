@@ -6,6 +6,7 @@ class ConnectionsController < ApplicationController
   # GET /connections.json
   def index
     @connections = @user.connections
+    render json: @connections.map { |x|  User.find(x)}
   end
 
   # GET /connections/1
