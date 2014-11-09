@@ -23,9 +23,36 @@ $( document ).ready(function() {
     for(var i = 0; i < data.length; i++){
       nodes.push({id: data[i].id, label: data[i].first_name});
       edges.push({from: $('#user').data('user'), to: data[i].id})
+      callForMatches(data[i].id);
+    }
+  });
+});
+
+function callForMatches(newid) {
+  $.ajax({
+    url: "users/"+ newid + "/connections",
+    format: "json"
+  }).done(function(newData){
+            debugger;
+    // create a local task (task model, view and pushed on to the task list)
+    for(var i = 0; i < newData.length; i++){
+      if (newData[i].id !== $('#user').data('user')) {
+         debugger;
+        nodes.push({id: newData[i].id, label: newData[i].first_name});
+        edges.push({from: newid, to: newData[i].id});
+      }
     }
   }).done(function(data){
     var container = document.getElementById('mynetwork');
+    nodes.sort( function( a, b){ return a.id - b.id; } );
+    // delete all duplicates from the array
+    for( var i=0; i<nodes.length-1; i++ ) {
+      if ( nodes[i].id == nodes[i+1].id ) {
+        delete nodes[i];
+      }
+    }
+    // remove the "undefined entries"
+    nodes = nodes.filter( function( el ){ return (typeof el !== "undefined"); } );
     var data = {
       nodes: nodes,
       edges: edges
@@ -33,9 +60,4 @@ $( document ).ready(function() {
     var options = {edges:{style:'arrow-center'}, height: '400px', width: '400px'};
     var network = new vis.Network(container, data, options);
   });
-
-
-
-  // create a network
-
-});
+}

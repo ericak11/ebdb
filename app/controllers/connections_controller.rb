@@ -5,8 +5,12 @@ class ConnectionsController < ApplicationController
   # GET /connections
   # GET /connections.json
   def index
-    @connections = @user.connections
-    render json: @connections.map { |x|  User.find(x)}
+    user = User.find(params[:user_id])
+    @connections = user.connections.map { |x|  User.find(x.relation_id)}
+    respond_to do |format|
+      format.json {render json: @connections}
+      format.html {render :index}
+    end
   end
 
   # GET /connections/1
@@ -59,7 +63,7 @@ class ConnectionsController < ApplicationController
   def destroy
     @connection.destroy
     respond_to do |format|
-      format.html { redirect_to connections_url, notice: 'Connection was successfully destroyed.' }
+      format.html { redirect_to user_connections_url(@user), notice: 'Connection was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
