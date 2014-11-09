@@ -1,5 +1,9 @@
+
+<% if params[:created_by] %>
+<h1>Add a new relation</h1>
+  <%= render 'user_created' %>
+<%else %>
 <h1>New user</h1>
-
-<%= render 'form' %>
-
+  <%= render 'form' %>
+<% end %>
 <%= link_to 'Back', login_path %>

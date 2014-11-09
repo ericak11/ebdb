@@ -24,16 +24,26 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(user_params)
-
-    respond_to do |format|
-      if @user.save
-        session[:user_id] = @user.id
+    if params[:user][:user_created]
+      @user = User.new(created_params)
+      if @user.save(validate: false)
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    else
+      @user = User.new(user_params)
+      respond_to do |format|
+        if @user.save
+          session[:user_id] = @user.id
+          format.html { redirect_to @user, notice: 'User was successfully created.' }
+          format.json { render :show, status: :created, location: @user }
+        else
+          format.html { render :new }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -72,6 +82,9 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:first_name, :last_name, :email, :gender, :birthday, :picture, :password,
       :password_confirmation, :location)
+    end
+    def created_params
+      params.require(:user).permit(:first_name, :last_name, :email, :gender, :picture,:location, :user_created)
     end
 
 end
