@@ -17,13 +17,17 @@ $( document ).ready(function() {
   $.ajax({
     url: "users/"+ $('#user').data('user') + "/connections",
     format: "json"
-  }).done(function(data){
+  }).done(function(info){
     // create a local task (task model, view and pushed on to the task list)
-    nodes.push({id: $('#user').data('user'), label: 'you'});
-    for(var i = 0; i < data.length; i++){
-      nodes.push({id: data[i].id, label: data[i].first_name});
-      edges.push({from: $('#user').data('user'), to: data[i].id})
-      callForMatches(data[i].id);
+    nodes.push({id: $('#user').data('user'), label: 'YOU', group: 'user'});
+    for(var i = 0; i < info.length; i++){
+      if(info[i].gender === 'Male') {
+        nodes.push({id: info[i].id, label: info[i].first_name, group: 'male'});
+      } else{
+        nodes.push({id: info[i].id, label: info[i].first_name, group: 'female'});
+      }
+      edges.push({from: $('#user').data('user'), to: info[i].id});
+      callForMatches(info[i].id);
     }
   });
 });
@@ -33,12 +37,14 @@ function callForMatches(newid) {
     url: "users/"+ newid + "/connections",
     format: "json"
   }).done(function(newData){
-            debugger;
     // create a local task (task model, view and pushed on to the task list)
     for(var i = 0; i < newData.length; i++){
       if (newData[i].id !== $('#user').data('user')) {
-         debugger;
-        nodes.push({id: newData[i].id, label: newData[i].first_name});
+        if(newData[i].gender === 'Male') {
+          nodes.push({id: newData[i].id, label: newData[i].first_name, group: 'male'});
+        } else {
+          nodes.push({id: newData[i].id, label: newData[i].first_name, group: 'female'});
+        }
         edges.push({from: newid, to: newData[i].id});
       }
     }
@@ -57,7 +63,42 @@ function callForMatches(newid) {
       nodes: nodes,
       edges: edges
     };
-    var options = {edges:{style:'arrow-center'}, height: '400px', width: '400px'};
+
+    var options = {edges:{style:'arrow-center'}, height: '400px', width: '400px',
+        groups: {
+          user: {
+            // defaults for nodes in this group
+            radius: 45,
+            color: 'black',
+            fontColor: 'white',
+            fontSize: 18,
+            fontFace: 'courier',
+            shape: 'box'
+          },
+          female: {
+            radius: 20,
+            color: {
+              border: 'black',
+              background: 'red',
+              highlight: {
+                border: 'black',
+                background: 'lightgray'
+              }
+            },
+            fontFace: 'arial',
+            shape: 'circle'
+          },
+          male: {
+            radius: 100,
+            color: {
+              border: 'black',
+              background: 'blue'
+            },
+            fontColor: 'black',
+            shape: 'dot',
+          }
+        }};
     var network = new vis.Network(container, data, options);
   });
 }
+

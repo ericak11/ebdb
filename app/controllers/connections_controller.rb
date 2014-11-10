@@ -6,7 +6,9 @@ class ConnectionsController < ApplicationController
   # GET /connections.json
   def index
     user = User.find(params[:user_id])
-    @connections = user.connections.map { |x|  User.find(x.relation_id)}
+    connections = user.connections.map { |x|  User.find(x.relation_id)}
+    relations = user.relations.map { |x|  User.find(x.user_id)}
+    @connections = (connections + relations).uniq
     respond_to do |format|
       format.json {render json: @connections}
       format.html {render :index}
