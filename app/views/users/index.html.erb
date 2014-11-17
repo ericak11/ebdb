@@ -19,19 +19,25 @@
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.gender %></td>
-        <td><%= user.birthday %></td>
-        <td><img src="<%= user.picture %>" alt=""></td>
-        <td><%= user.location %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Add Connection', new_user_connection_path(user) %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% if @user != user %>
+        <tr>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.gender %></td>
+          <td><%= user.birthday %></td>
+          <td><img src="<%= user.picture %>" alt=""></td>
+          <td><%= user.location %></td>
+          <td><%= link_to 'Show', user %></td>
+          <% if  @connections.include? user.id %>
+          <td>CONNECTED</td>
+          <% else %>
+            <td><%= link_to 'Add Connection', new_user_connection_path(user) %></td>
+          <% end %>
+          <td><%= link_to 'Edit', edit_user_path(user) %></td>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

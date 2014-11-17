@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @user = User.find(session[:user_id])
+    @connections = @user.connections.map { |x| x.relation_id }
   end
 
   # GET /users/1
